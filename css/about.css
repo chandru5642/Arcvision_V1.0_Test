@@ -1,0 +1,192 @@
+:root {
+  /* Font Family */
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  
+  /* Font Sizes */
+  --font-xl: 2.5rem;
+  --font-lg: 1.5rem;
+  --font-md: 1.1rem;
+  --font-sm: 1.0rem;
+
+  /* Colors */
+  --color-white: #ffffff;
+  --color-light-gray: #FAFAFA;
+  --color-section-bg: #ECEFF1;
+  --color-dark-text: #333;
+  --color-heading: #558B2F;
+  --color-tile-icon-bg: #4CAF50; /* or var(--green-btn) */
+  --color-tile-icon-hover: #33691E;
+  --color-banner-bg: #263238;
+  --color-light-text: #f1f1f1;
+}
+/* ABOUT PAGE */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background-color: var(--color-white);
+  gap: 2rem;
+  font-family: var(--font-main);
+}
+.section:nth-child(even) {
+  background-color: var(--color-light-gray);
+}
+.section,
+.tile,
+.banner-overlay,
+.collaboration-text {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About & Purpose Sections */
+.content-left, .content-right {
+  flex: 1;
+  min-width: 280px;
+  padding: 1.5rem;
+}
+
+.content-left h2,
+.content-right h2 {
+  font-size: var(--font-xl);
+  color: var(--color-heading);
+}
+
+.content-left p,
+.content-right p {
+  font-size: var(--font-md);
+  color: var(--color-dark-text);
+}
+
+.content-right img,
+.content-left img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Mission & Vision Tiles */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--color-light-gray);
+  padding: 3rem 1rem;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.tile {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+}
+
+/* Left Icon Section */
+.tile-icon {
+  width: 120px;
+  background-color: var(--color-tile-icon-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tile-icon i {
+  font-size: var(--font-lg);
+  color: var(--color-white);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tile:hover .tile-icon {
+  background-color: var(--color-tile-icon-hover);
+}
+
+.tile:hover .tile-icon i {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--color-light-text);
+}
+
+/* Right Text Section */
+.tile-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tile-content h3 {
+  font-size: var(--font-lg);
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+  color: var(--color-heading);
+}
+
+.tile-content p {
+  color: var(--color-dark-text);
+  margin: 0;
+  font-size: var(--font-sm);
+}
+
+/* Collaboration Banner */
+.collaboration {
+  background-color: var(--color-banner-bg);
+  color: var(--color-dark-text);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.collaboration-text {
+  flex: 1;
+  min-width: 280px;
+  color: var(--color-dark-text);
+}
+
+.collaboration-text p {
+  font-size: var(--font-md);
+  margin-bottom: 1rem;
+}
+
+.collaboration-text h2 {
+  color: var(--color-heading);
+  font-size: var(--font-xl);
+  text-align: left;
+}
+
+.collaboration img {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* ✨ CONTAINER STYLE MATCHING PRODUCT PAGE  */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
